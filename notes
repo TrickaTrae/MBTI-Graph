@@ -1,0 +1,167 @@
+// function myTest() {
+//   ctx.beginPath();
+//   ctx.arc(initX.value, initY.value, 8, 0, 2 * Math.PI, true);
+//   ctx.fillStyle = "#0095DD";
+//   ctx.fill();
+//   ctx.closePath();
+
+//   initX.value += IX;
+//   initY.value += IY;
+// }
+
+// setInterval(myTest, 150);
+
+// console.log("test: ", 100 / 66);
+// console.log("test: ", 100 / 1.6666666666666667);
+// console.log("test: ", 17.5 / 1.5151515151515151);
+// console.log("test: ", 100 / 95);
+// console.log("test: ", 7.6 / 1.0526315789473684);
+// console.log("testing: ", 100 / 48);
+// console.log("testing: ", 19 / 2.0833333333333335);
+
+// console.log("test: ", 66 / 50);
+// console.log("test: ", 8.5 * 1.32);
+// console.log("test: ", 95 / 50);
+// console.log("test: ", 3.8 * 1.9);
+// console.log("test: ", 50 / 48);
+// console.log("test: ", 9.5 / 1.0416666666666667);
+
+  // centerX, centerY, radius, start angle, end angle
+// drawArc(ctx, 400, 400, 8, 0, 2 * Math.PI, "#000000", "#000000", true);
+  
+            //   this.colors = options.colors;
+          // let color_index = 0;
+    // this.colors[color_index % this.colors.length]
+    //   color_index++;
+  //   colors: [
+  //     "#fde23e",
+  //     "#f16e23",
+  //     "#57d9ff",
+  //     "#937e88",
+  //     "#fde23e",
+  //     "#f16e23",
+  //     "#57d9ff",
+  //     "#937e88",
+  //     "#fde23e",
+  //     "#f16e23",
+  //     "#57d9ff",
+  //     "#937e88"
+  //   ],
+
+// drawLine(ctx, 20, 20, 200, 200);
+// drawArc(ctx, 400, 400, 250, 0, 2 * Math.PI, "#ff0000");
+// drawPieSlice(
+//   ctx,
+//   400,
+//   400,
+//   150,
+//   Math.PI / 2,
+//   Math.PI / 2 + Math.PI / 4,
+//   "#ff0000"
+// );
+
+// const canvas = document.getElementById("canvas");
+// const ctx2 = canvas.getContext("2d");
+// ctx2.fillStyle = "blue";
+// ctx2.fillRect(300, 100, 4, 400);
+// ctx.rotate((20 * Math.PI) / 180);
+
+// ctx.beginPath();
+// ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+// ctx.moveTo(110, 75);
+// ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+// ctx.moveTo(65, 65);
+// ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+// ctx.moveTo(95, 65);
+// ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+// ctx.stroke();
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script> -->
+    <!-- <canvas id="myChart"></canvas> -->
+
+// const chart = new Chart(ctx, {
+//   type: "pie",
+
+//   // The data for our dataset
+//   data: {
+//     labels: [
+//       "Improvising",
+//       "Collaborating",
+//       "Teaching",
+//       "Supporting",
+//       "Organizing",
+//       "Disciplined",
+//       "Detailed",
+//       "Systematic",
+//       "Investigative",
+//       "Conceptual",
+//       "Theoretical",
+//       "Innovative"
+//     ],
+
+//     datasets: [
+//       {
+//         label: "dataset",
+//         backgroundColor: "#ffffff",
+//         borderColor: "rgb(255, 99, 132)",
+//         data: [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+//       }
+//     ]
+//   },
+
+//   // Configuration options go here
+//   options: {
+//     rotation: 5.5,
+//     cutoutPercentage: 18,
+//     animation: {
+//       animateRotate: false
+//     },
+//     legend: false,
+//     events: null,
+//     responsive: true,
+//     aspectRatio: 3
+//   }
+// });
+
+
+// IE *66 for edge of circle
+// NS *95 for edge of circle
+// TF *50 for edge of circle
+// JP *48 for edge of circle
+
+
+// below are the amounts x and y will change to move toward the letter correctly
+
+// -------------------------------------------------------IE
+// if number is positive, which would equal E
+const EX = 2.52;
+const EY = -1.45;
+
+// if the number is negative, which would equal I
+const IX = -2.52;
+const IY = 1.45;
+
+// -------------------------------------------------------NS
+// if the number is positive, which would equal S
+const SX = 1;
+const SY = 1.8;
+
+// if the number is negative which would equal N
+const NX = -1;
+const NY = -1.8;
+
+// -------------------------------------------------------TF
+// if the number is positive, which would equal F
+const FX = 3.75;
+const FY = 1;
+// if the number is negative, which would equal T
+const TX = -3.75;
+const TY = -1;
+
+// -------------------------------------------------------JP
+// if the number is positive, which would equal P
+const PX = 1.05;
+const PY = -3.95;
+// if the number is negative, which would equal J
+const JX = -1.05;
+const JY = 3.95;
