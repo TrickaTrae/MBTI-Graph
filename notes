@@ -1,3 +1,68 @@
+// slope
+// initX.value / initY.value = a / b = slope
+// a = b * slope
+
+// initX.value squared + initY.value squared = distance squared
+
+// a sqr + b sqr = c sqr (c sqr = 200*200)
+// (b*slope)sqr + b sqr = 200*200
+// b sqr * (slope sqr +1) = 200*200
+// b sqr = 40000 / (slope sqr +1)
+// b = 200 / sqrt(slope sqr +1)
+// b = 200 / sqrt((initX.value/initY.value) sqr +1)
+// this equals b (new y value)
+
+// new x value = new b * slope
+
+
+// if(distanceSqr > radiusSqr){
+  // console.log('WE HAVE A PROBLEM, ITS OUTSIDE THE CIRCLE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+
+  // check if on left side
+  // if(initX.value < 350){
+
+  //   if(initY.value < 340 && initY.value > 260){
+  //     do{
+  //       initX.value++
+  //       initY.value+=0.2
+  //       distanceSqr = ((initX.value - 400)*(initX.value - 400)) + ((initY.value - 400)*(initY.value - 400));
+  //     }
+  //     while(distanceSqr > radiusSqr);
+  //   } else if(initY.value < 260){
+  //     do{
+  //       initX.value++
+  //       initY.value+=0.5
+  //       distanceSqr = ((initX.value - 400)*(initX.value - 400)) + ((initY.value - 400)*(initY.value - 400));
+  //     }
+  //     while(distanceSqr > radiusSqr);
+  //   }else if(initY.value > 450) {
+  //     do{
+  //       initX.value++
+  //       initY.value--
+  //       distanceSqr = ((initX.value - 400)*(initX.value - 400)) + ((initY.value - 400)*(initY.value - 400));
+  //     }
+  //     while(distanceSqr > radiusSqr);
+  //   } else {
+  //     do{
+  //       initX.value++
+  //       distanceSqr = ((initX.value - 400)*(initX.value - 400)) + ((initY.value - 400)*(initY.value - 400));
+  //     }
+  //     while(distanceSqr > radiusSqr);
+  //   }
+
+  // }
+
+  // check if on right side
+  // if(initX.value > 400){
+  //   do{
+  //     initX.value--
+  //     distanceSqr = ((initX.value - 400)*(initX.value - 400)) + ((initY.value - 400)*(initY.value - 400));
+  //   }
+  //   while(distanceSqr > radiusSqr);
+  // }
+
+// }
+
 // function myTest() {
 //   ctx.beginPath();
 //   ctx.arc(initX.value, initY.value, 8, 0, 2 * Math.PI, true);

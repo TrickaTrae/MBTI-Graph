@@ -184,10 +184,10 @@ drawText(ctx, "red", "Flexer", "16px Arial", 378, 406);
 
 // enter values here
 let personality = {
-  IE: { Value: 3.566666666666667 },
-  NS: { Value: 11.419354838709678 },
-  TF: { Value: 18.933333333333334 },
-  JP: { Value: -20.966666666666665 }
+  IE: { Value: -27.375 },
+  NS: { Value: -25.125 },
+  TF: { Value: -35.42857142857143 },
+  JP: { Value: -11.5 }
 };
 
 // converting values to work with px chart
@@ -243,6 +243,34 @@ let x5 = initX.value + JPX;
 initX.value = x5;
 let y5 = initY.value + JPY;
 initY.value = y5;
+
+// checking if last point is outside the circle (then moving back inside if true)
+let distanceSqr = ((initX.value - 400)*(initX.value - 400)) + ((initY.value - 400)*(initY.value - 400));
+let radius = 200;
+let distance = Math.sqrt(distanceSqr);
+
+if(distance > radius){
+  let oldX = initX.value - 400;
+  let oldY = initY.value - 400;
+  let slope = oldX/oldY;
+
+  let newY = ((200 / Math.sqrt((slope*slope)+1)));
+  let rawY = newY;
+  if((oldY < 0 && newY > 0) || (oldY > 0 && newY < 0)){
+    newY = -newY;
+  }
+  newY += 400;
+
+  let newX = (rawY*slope);
+  if((oldX < 0 && newX > 0) || (oldX > 0 && newX < 0)){
+    newX = -newX;
+  }
+  newX += 400;
+
+  initX.value = newX;
+  initY.value = newY;
+}
+
 ctx.moveTo(initX.value, initY.value);
 ctx.arc(initX.value, initY.value, 8, 0, 2 * Math.PI, true); // drawing JP, this is the only point the user will see
 
