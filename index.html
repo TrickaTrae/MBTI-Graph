@@ -9,12 +9,27 @@
   </head>
   <body>
     <canvas
-      id="canvas"
+      id="canvas2"
+      width="800px"
+      height="800px"
+      style="border: solid black 1px"
+    ></canvas>
+    <canvas
+      id="canvas3"
+      width="800px"
+      height="800px"
+      style="border: solid black 1px"
+    ></canvas>
+    <canvas
+      id="canvas4"
       width="800px"
       height="800px"
       style="border: solid black 1px"
     ></canvas>
 
     <script src="./index.js"></script>
+    <script>mbtiGraph(canvas2, -27.375, -25.125, -35.42857142857143, -11.5)</script>
+    <script>mbtiGraph(canvas3, 27.375, 25.125, -35.42857142857143, 11.5)</script>
+    <script>mbtiGraph(canvas4, -10.375, 25.125, 35.42857142857143, 11.5)</script>
   </body>
 </html>
